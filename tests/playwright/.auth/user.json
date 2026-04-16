@@ -1,0 +1,65 @@
+{
+  "cookies": [
+    {
+      "name": "_fbp",
+      "value": "fb.1.1776373903274.514935784125118295",
+      "domain": ".apuestatotal.dev",
+      "path": "/",
+      "expires": 1784149903,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ttp",
+      "value": "3CSLDN9LuTv4mO60N5xgdAitxH6",
+      "domain": ".tiktok.com",
+      "path": "/",
+      "expires": 1810069904.120089,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "yFtHjEAI3tnB8GrKFjdpOBpAUlpJvLi8qxmi9gkVVjQ-1776373904-1.0.1.1-fxYnb4zkNqwlJ9Lc2Qr8rERAaMI2ksmMpA.dca.8H4LbYlbvvHCdJfhMRDzG.0_0vI_DFdXy_FJeucOZorMguFmlbLqxnBhnDst8C4qouYM",
+      "domain": ".apuestatotal.com",
+      "path": "/",
+      "expires": 1776375704.540244,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://calimaco.apuestatotal.dev",
+      "localStorage": [
+        {
+          "name": "lastExternalReferrer",
+          "value": "empty"
+        },
+        {
+          "name": "647a3d19ac2647f361068a43df3a4da1",
+          "value": "35383810-9d1b-48c3-9cb9-db1ac2aeaacb"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1776373903236"
+        },
+        {
+          "name": "990a6d8eb6cbb8ea44b73d21f1e473b43b9c74ea",
+          "value": "prod"
+        },
+        {
+          "name": "511a26f4be2047a348064e4abe8ce2a9",
+          "value": "2026-04-16T21:11:44.381Z"
+        },
+        {
+          "name": "19a826c7f361268a43da3a46a12047f3",
+          "value": "35383810-9d1b-48c3-9cb9-db1ac2aeaacb"
+        }
+      ]
+    }
+  ]
+}

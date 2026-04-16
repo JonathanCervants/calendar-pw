@@ -1,0 +1,20 @@
+{
+   "compilerOptions": {
+    "target": "ESNext",                  /* Compila a la versión más moderna de JS (Node lo soporta nativamente) */
+    "module": "commonjs",                /* Estándar de módulos para Node.js */
+    "moduleResolution": "bundler",          /* Estrategia para encontrar dependencias en node_modules */
+    /* Calidad de Código (Estricto) */
+    "strict": true,                      /* Activa todas las validaciones estrictas (evita bugs sutiles) */
+    "noImplicitAny": true,               /* Te obliga a definir si una variable es un string, number, etc. */
+    "strictNullChecks": true,            /* Evita el famoso error "Cannot read property of null" */
+    
+    /* Interoperabilidad y Tipos */
+    "esModuleInterop": true,             /* Permite importar módulos antiguos de forma moderna (import x from 'y') */
+    "skipLibCheck": true,                /* Ignora los errores de tipos dentro de node_modules para que compile más rápido */
+    "forceConsistentCasingInFileNames": true, /* Evita errores si alguien compila en Mac/Linux vs Windows */
+        "types": [
+            "@playwright/test",                /* Carga los tipos de test, expect, page */
+            "node"
+        ]
+    }
+}
