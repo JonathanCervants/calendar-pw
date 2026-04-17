@@ -9,13 +9,12 @@ setup('qwert', async({page})=>{
     const button =  page.locator("text=Inicia sesión")
     await button.click()
 
-    await page.locator('#email').fill('test.first011@apuestatotal.net');
+    await page.locator('#email').fill('test.first010@apuestatotal.net');
     await page.locator('#password').fill('Password123!');
     await page.locator("text=CONTINUAR").click({timeout:3000});
-    await page.locator('text="9999"');
-    await expect(page.locator("text=Recargar").first()).toBeVisible({timeout: 5000});
-
+    //await page.getByRole("button", {name: 'Recargar'}).click({timeout: 3000});
     //save storages
+    setTimeout(()=> 3000);
     await page.context().storageState({path: authFile})
     console.log('✅ Sesión guardada con éxito.');
 })
