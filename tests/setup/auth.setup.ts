@@ -11,11 +11,11 @@ setup('qwert', async({page})=>{
 
     await page.locator('#email').fill('test.first011@apuestatotal.net');
     await page.locator('#password').fill('Password123!');
-    await page.locator("text=CONTINUAR").click();
-    await page.locator('text="Recargar" >> visible= true').click();
-    //await expect(page.locator("text=Recargar")).toBeVisible({timeout: 5000});
+    await page.locator("text=CONTINUAR").click({timeout:3000});
+    await page.locator('text="9999"');
+    await expect(page.locator("text=Recargar").first()).toBeVisible({timeout: 5000});
 
-    //save storage
+    //save storages
     await page.context().storageState({path: authFile})
     console.log('✅ Sesión guardada con éxito.');
 })
