@@ -39,8 +39,8 @@ export default defineConfig({
       testMatch: /.*\.setup\.ts/,
     },
     {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'], 
+      name: 'iPhone 15',
+      use: { ...devices['iPhone 15'], 
         storageState: 'tests/playwright/.auth/user.json',
       },
       dependencies: ['setup']
