@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async({page})=>{
-  await page.goto('calendario');
+  await page.goto('/mapas');
 });
 
 test('Navegación Semana', async ({page}) =>{
