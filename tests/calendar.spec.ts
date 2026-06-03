@@ -1,7 +1,17 @@
 import { test, expect } from '@playwright/test';
+import { chromium } from '@playwright/test';
+test.beforeEach(async({browser})=>{
+  // await page.goto('calendario');
+  const context = await browser.newContext({
+  });
 
-test.beforeEach(async({page})=>{
-  await page.goto('calendario');
+  const page = await context.newPage(); 
+  const pagetwo = await context.newPage();
+
+ await page.goto('/apuestas-deportivas');
+ await pagetwo.goto('/apuestas-en-vivo');
+
+
 });
 
 test('Navegación Semana', async ({page}) =>{
@@ -10,20 +20,4 @@ test('Navegación Semana', async ({page}) =>{
   await page.getByRole('link', { name: 'Calendario AT Nuevo' }).click();
   const btnEnVivo = page.locator('#atv2-calendario').contentFrame().getByRole('button', {name:'Hoy'});
   await btnEnVivo.click()
- 
 });
-
-
-// 📌 Reu 22/04/26:
-// Reu con Trigal 
-// Junior agregado el PIN, Chat
-//Diseño de la Agenda, Modal vista semanal
-//Sofía probar las mejoras en el terminal ver si estan o no, hacer un testeo a los terminales.
-//Probar: SS-32  |  
-
-//Keyisi: Pruebas estadísticas de la Ruta del Ajuste, PO tiene un estadístico
-//Erika: Casos de Prueba Ludopatía
-//Brigitte: Whatsapp Log, pruebas upsert y registros de nuevos clientes, menciono databricks, caja chica
-
-//21-04
-//LuisM : Gamificación API MiniGame Pruebas de Performance con Marcos | GanaAT | W
