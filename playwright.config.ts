@@ -23,17 +23,24 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://web-at.kurax.dev/',
+    baseURL: 'https://web-at-stg.kurax.dev/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-  },
+  },  
 
   projects: [
     {
       name: 'setup',
       testMatch: /.*\.setup\.ts/,
       use: { ...devices['Pixel 5'] },
+    },
+     {
+      name: 'chromium',
+      use: { ...devices['Pixel 5'] ,
+      storageState: 'tests/playwright/.auth/user.json',
+      },
+      dependencies: ['setup']
     },
     // {
     //   name: 'iPhone 15',
@@ -42,13 +49,11 @@ export default defineConfig({
     //   },
     //   dependencies: ['setup']
     // }, 
-    {
-      name: 'chromium',
-      use: { ...devices['Pixel 5'] ,
-      storageState: 'tests/playwright/.auth/user.json',
-      },
-      dependencies: ['setup']
-    },
+   
+    // // {
+    // //   name: 'Google Chrome',
+    // //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    // // },
     /* 
     
     {
@@ -71,9 +76,6 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    
   ],
 });

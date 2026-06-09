@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { chromium } from '@playwright/test';
 test.beforeEach(async({browser})=>{
-  // await page.goto('calendario');
   const context = await browser.newContext({
   });
 
@@ -10,11 +8,11 @@ test.beforeEach(async({browser})=>{
 
  await page.goto('/apuestas-deportivas');
  await pagetwo.goto('/apuestas-en-vivo');
-
+ 
 
 });
 
-test('Navegación Semana', async ({page}) =>{
+test('Navegación', async ({page}) =>{
   page.pause();
   await page.locator('.sc-fICZUB').click();
   await page.getByRole('link', { name: 'Calendario AT Nuevo' }).click();
