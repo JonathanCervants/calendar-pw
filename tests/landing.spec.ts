@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async({page})=>{
-  await page.goto('/copa-2026');
+  await page.goto('/apuestas-en-vivo');
 });
 
 test('Navegación Semana', async ({page}) =>{
