@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { BrowserContext } from '@playwright/test';
 test.beforeEach(async({page})=>{
-  await page.goto('/apuestas-deportivas/?fpath=/es-pe/spbkv3/Fútbol/Internacional/Amistoso-Internacional/Perú-vs-España/849583321553117184');
+  await page.goto('/mapas');
   
 });
 

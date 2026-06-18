@@ -7,7 +7,7 @@ test.beforeEach(async({browser})=>{
   const pagetwo = await context.newPage();
 
  await page.goto('/apuestas-deportivas');
- await pagetwo.goto('/apuestas-en-vivo');
+ //await pagetwo.goto('/apuestas-en-vivo');
  
 
 });
