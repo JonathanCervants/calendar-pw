@@ -31,49 +31,34 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'setup',
-      testMatch: /.*\.setup\.ts/,
-      use: { ...devices['Pixel 5'] },
-    },
-    {
       name: 'chromium-desktop',
       use: { 
         ...devices['Desktop Chrome'],
-        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
     },
     {
       name: 'firefox-desktop',
       use: { 
         ...devices['Desktop Firefox'],
-        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
     },
     {
       name: 'webkit-desktop',
       use: { 
         ...devices['Desktop Safari'],
-        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
     },
     {
       name: 'chromium-mobile',
       use: { 
         ...devices['Pixel 5'],
-        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
     },
     {
       name: 'webkit-mobile',
       use: { 
         ...devices['iPhone 15'],
-        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup'],
     },
   ],
 });
