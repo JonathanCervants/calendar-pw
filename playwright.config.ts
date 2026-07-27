@@ -23,7 +23,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://www.apuestatotal.com/',
+    baseURL: 'https://calimaco.apuestatotal.dev/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -35,45 +35,45 @@ export default defineConfig({
       testMatch: /.*\.setup\.ts/,
       use: { ...devices['Pixel 5'] },
     },
-    // {
-    //   name: 'iPhone 15',
-    //   use: { ...devices['iPhone 15'], 
-    //     storageState: 'tests/playwright/.auth/user.json',
-    //   },
-    //   dependencies: ['setup']
-    // }, 
     {
-      name: 'chromium',
-      use: { ...devices['Pixel 5'] ,
-      storageState: 'tests/playwright/.auth/user.json',
+      name: 'chromium-desktop',
+      use: { 
+        ...devices['Desktop Chrome'],
+        storageState: 'tests/playwright/.auth/user.json',
       },
-      dependencies: ['setup']
-    },
-    /* 
-    
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      dependencies: ['setup'],
     },
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: 'firefox-desktop',
+      use: { 
+        ...devices['Desktop Firefox'],
+        storageState: 'tests/playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
     },
-    Test against mobile viewports. */
-    
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: 'webkit-desktop',
+      use: { 
+        ...devices['Desktop Safari'],
+        storageState: 'tests/playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
+    {
+      name: 'chromium-mobile',
+      use: { 
+        ...devices['Pixel 5'],
+        storageState: 'tests/playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
+    {
+      name: 'webkit-mobile',
+      use: { 
+        ...devices['iPhone 15'],
+        storageState: 'tests/playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
   ],
 });

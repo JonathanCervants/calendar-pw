@@ -3,7 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:all": "playwright test",
+    "test:chromium-desktop": "playwright test --project=chromium-desktop",
+    "test:firefox-desktop": "playwright test --project=firefox-desktop",
+    "test:webkit-desktop": "playwright test --project=webkit-desktop",
+    "test:chromium-mobile": "playwright test --project=chromium-mobile",
+    "test:webkit-mobile": "playwright test --project=webkit-mobile",
+    "test:ui": "playwright test --ui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

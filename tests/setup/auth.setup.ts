@@ -14,9 +14,9 @@ setup('qwert', async({page})=>{
     const button =  page.locator("text=Inicia sesión")
     await button.click()
 
-    await page.locator('#email').fill('test.first009@apuestatotal.net');
-    await page.locator('#password').fill('Password123!');
-    await page.locator("text=CONTINUAR").click({timeout:5000});
+    await page.locator('#login-email').fill('jesus.cervantes@kurax.dev');
+    await page.locator('#login-password').fill('Password321!');
+    await page.locator("text=INGRESAR").click({timeout:5000});
     
     const btnRecargar= page.getByRole('button', { name: 'Recargar' });
     await expect(btnRecargar).toBeVisible({timeout: 10000})
